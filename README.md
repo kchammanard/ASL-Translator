@@ -8,9 +8,9 @@ choco install make
 ```
 Build docker image
 ```Shell
-docker build -t hand-image .
+make docker-build
 ```
 Run inference
 ```Shell
-docker run --rm hand-image python src/main.py
+make run-inference
 ```
