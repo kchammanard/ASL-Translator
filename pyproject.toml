@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "final project"
+version = "0.1.0"
+description = ""
+authors = ["kchammanard <kfccoolguy@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+mediapipe = "^0.10.11"
+opencv-python = "^4.9.0.80"
+numpy = "^1.26.4"
+tensorflow-io-gcs-filesystem = "0.31.0"
+tensorflow = "^2.16.1"
+keras = "^3.1.1"
+pandas = "^2.2.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
