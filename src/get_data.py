@@ -3,10 +3,17 @@ import cv2
 import numpy as np
 import time
 import math
-from HandTracking import HandTracking
+from track import HandTracking
+import string
 
 def main():
     # init model
+    classes = dict( (i, key) for i,key in enumerate(string.ascii_lowercase))
+    classes[26] = ' '
+    classes[27] = '.'
+    classes[28] = 'back'
+    classes[29] = 'back'
+
     HT = HandTracking()
 
     save = False
@@ -49,9 +56,9 @@ def main():
             sl = ",".join(map(str, l))
             print(sl)
             if save:
-                with open("data/retrain_s_u.csv", "a") as h:
+                with open("dataset/training_batch.csv", "a") as h:
                     h.write(sl+f",{ind}\n")
-                print(f"Saving {ind}")
+                print(f"Saving {classes[ind]}")
                 count += 1
 
         # get fps
@@ -64,13 +71,13 @@ def main():
 
         key = cv2.waitKey(250)
 
-        if key == ord("q") or count >= 75:
+        if key == ord("q") or count >= 200:
             cap.release()
             count = 0
         elif key == ord("s"):
             if save == False:
                 ind = int(input("INDEX: "))
-                print(f"Saving as {ind}")
+                print(f"Saving as {classes[ind]}")
             else:
                 print("Stop saving..")
             save = not save

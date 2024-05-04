@@ -13,7 +13,7 @@ class HandTracking:
             min_detection_confidence=0.8, min_tracking_confidence=0.5, max_num_hands=1)
 
     def track(self, image):
-        return self.model.process(image)
+        return self.model.process(image)    
 
     def read_results(self, image, hands_results):
         self.frame_width, self.frame_height = int(
@@ -28,7 +28,6 @@ class HandTracking:
         return dx, dy, dz, dxy
 
     # HAND
-
     def get_hand_coords(self, hand, landmark_index):
         return tuple(np.multiply(
             np.array(

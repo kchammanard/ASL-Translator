@@ -18,4 +18,4 @@ RUN poetry config virtualenvs.create false \
     && poetry install --no-interaction --no-ansi
 
 # Command to run the application
-CMD ["python", "src/jellyfish/main.py"]
+CMD ["python", "src/main.py"]

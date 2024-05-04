@@ -7,13 +7,15 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = ">=3.10,<3.12"
-mediapipe = "^0.10.11"
 opencv-python = "^4.9.0.80"
 numpy = "^1.26.4"
 tensorflow-io-gcs-filesystem = "0.31.0"
 tensorflow = "^2.16.1"
 keras = "^3.1.1"
 pandas = "^2.2.1"
+ipykernel = "^6.29.4"
+mediapipe = "^0.10.11"
+scikit-learn = "^1.4.1.post1"
 
 
 [build-system]
