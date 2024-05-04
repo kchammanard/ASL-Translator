@@ -6,8 +6,9 @@ Use Makefile for building the project and running inference. You can install **m
 ```Shell
 choco install make
 ```
-Build docker image
+Build docker image (takes around 3 minutes)
 ```Shell
+cd ASL-Translator
 make docker-build
 ```
 Run inference
