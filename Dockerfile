@@ -1,4 +1,4 @@
-FROM python:3.10
+FROM python:3.10-slim
 
 # Set the working directory in the container
 WORKDIR /usr/src/app
@@ -18,4 +18,4 @@ RUN poetry config virtualenvs.create false \
     && poetry install --no-interaction --no-ansi
 
 # Command to run the application
-CMD ["python", "src/main.py"]
+# CMD ["python", "src/main.py"]
