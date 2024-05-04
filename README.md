@@ -13,7 +13,7 @@ make docker-build
 ```
 Load the model and data using dvc
 ```Shell
-choco install make
+dvc pull
 ```
 Run inference
 ```Shell
