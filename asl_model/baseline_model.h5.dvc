@@ -1,0 +1,5 @@
+outs:
+- md5: 3635bcebdc61a8062abf39b2199fc184
+  size: 51576
+  hash: md5
+  path: baseline_model.h5
