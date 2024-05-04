@@ -11,6 +11,10 @@ Build docker image (takes around 3 minutes)
 cd ASL-Translator
 make docker-build
 ```
+Load the model and data using dvc
+```Shell
+choco install make
+```
 Run inference
 ```Shell
 make run-inference
