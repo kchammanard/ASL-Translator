@@ -11,11 +11,8 @@ Build docker image (takes around 5 minutes)
 cd ASL-Translator
 make docker-build
 ```
-Load the model and data using dvc
-```Shell
-dvc pull
-```
-Run inference
+Run inference 
+**Note** - You MUST allow docker to access your camera, otherwise your camera cannot be opened
 ```Shell
 make run-inference
 ```
