@@ -15,7 +15,7 @@ model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=1e-3),
               metrics=[tf.keras.metrics.BinaryAccuracy(),
                        tf.keras.metrics.FalseNegatives()])
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(-1)
 offset = 20
 imgSize = 300
 classes = dict( (i, key) for i,key in enumerate(string.ascii_lowercase))
